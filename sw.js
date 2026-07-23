@@ -1,7 +1,8 @@
-const CACHE_NAME = 'rafeeq-web-v14';
+const CACHE_NAME = 'rafeeq-web-v15';
 const APP_SHELL = [
   './',
-  './index.html',
+  './index-final-api.html',
+  './v15-boredom.js',
   './manifest.json',
   './app-icon.svg',
   './app-icon-192.png',
@@ -35,7 +36,7 @@ self.addEventListener('fetch', event => {
         caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
         return response;
       })
-      .catch(() => caches.match(event.request).then(hit => hit || caches.match('./index.html')))
+      .catch(() => caches.match(event.request).then(hit => hit || caches.match('./index-final-api.html')))
   );
 });
 
@@ -44,7 +45,7 @@ self.addEventListener('notificationclick', event => {
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true }).then(list => {
       if (list.length) return list[0].focus();
-      return clients.openWindow('./index.html');
+      return clients.openWindow('./index-final-api.html');
     })
   );
 });

@@ -1,11 +1,11 @@
 {
-  "id": "./",
+  "id": "./index-final-api.html",
   "name": "رفيق مايندست",
   "short_name": "رفيق",
   "description": "رفيقك النفسي والإيماني واليومي",
   "lang": "ar",
   "dir": "rtl",
-  "start_url": "./",
+  "start_url": "./index-final-api.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
