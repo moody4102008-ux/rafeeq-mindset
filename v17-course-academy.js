@@ -4,7 +4,7 @@ const CourseAcademyV17={
   courses:window.COURSES_V17||[],
   state(courseId){return Storage.get('course_v17_'+courseId,{done:[],answers:{},startedAt:Date.now(),streak:1})},
   save(courseId,s){Storage.set('course_v17_'+courseId,s)},
-  progress(course){const s=this.state(course.id),done=new Set(s.done);return {done,total:course.units.length,percent:Math.round(done.size/course.units.length*100),set:done}},
+  progress(course){const s=this.state(course.id),done=new Set(s.done);return {done:done.size,total:course.units.length,percent:Math.round(done.size/course.units.length*100),set:done}},
   catalog(){
     Modal.open(`<div class="academy-v17"><div class="academy-hero"><span>🎓</span><div><h2>أكاديمية رفيق</h2><p>50 كورسًا عمليًا بالمصري — اختار رحلتك وابدأ.</p></div></div>
       <input id="courseSearchV17" class="input mt-3" placeholder="دوّر على كورس…" oninput="CourseAcademyV17.filter(this.value)">
