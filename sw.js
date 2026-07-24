@@ -1,8 +1,15 @@
-const CACHE_NAME = 'rafeeq-web-v17';
+const CACHE_NAME = 'rafeeq-web-v230';
 const APP_SHELL = [
   './',
   './index-final-api.html',
   './v16-ask-mindset.js',
+  './v18-attached-knowledge.js',
+  './v18-attached-ask.js',
+  './v19-timed-greetings.js',
+  './v20-friday-quran-prayer-sound.js',
+  './v21-now-actions.js',
+  './v22-feelings-wird.js',
+  './v23-boredom-game.js',
   './courses-v17-01.js',
   './courses-v17-02.js',
   './courses-v17-03.js',
